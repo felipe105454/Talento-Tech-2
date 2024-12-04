@@ -1,0 +1,96 @@
+ /* Estilos CSS aquí */
+ body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-image: url('../IMG/IMG/principal.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f8fb;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Resto del CSS aquí */
+
+/* Estilos para la sección de Energía Hidráulica */
+.energy-info {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+.energy-info h2 {
+    color: #2c3e50;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+    opacity: 1;
+    transform: translateY(0);
+    animation: none;
+}
+
+.energy-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.energy-info ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.energy-info li {
+    margin-bottom: 10px;
+}
+
+.cta {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.cta .btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.cta .btn:hover {
+    background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+    .energy-info {
+        padding: 30px;
+    }
+
+    .energy-info h2 {
+        font-size: 28px;
+    }
+
+    .energy-info p,
+    .energy-info ul {
+        font-size: 16px;
+    }
+
+    .cta .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}

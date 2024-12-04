@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transición Energética Justa</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/princial.css"> <!-- Aquí se llama al archivo CSS -->
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Transición Energética Justa</h1>
+        <p>Explora las energías renovables y su impacto en el futuro energético.</p>
+    </header>
+
+  <!-- Navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="nav-link" href="index.html">Inicio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="InfoEnergia.html">Fuentes de Energía</a>
+
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Calculadora.html">Calculadora de Energía</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="VisualDatos.html">Visualización de Datos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Dashboard.html">Dashboard</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+ <!-- Sección de Fuentes de Energía -->
+ <section id="fuentes" class="container my-5">
+    <h2>Fuentes de Energía Renovable</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="../IMG/IMG/energiaSolar.png" alt="Energía Solar" class="img-fluid mb-3">
+            <h3>Energía Solar</h3>
+            <p><strong>Descripción:</strong> La energía solar se obtiene a partir de la radiación del sol, mediante paneles solares fotovoltaicos o sistemas de energía solar térmica.</p>
+            <p><strong>Ventajas:</strong></p>
+            <ul>
+                <li>Renovable y Abundante.</li>
+                <li>Reducción de Emisiones.</li>
+                <li>Bajos Costos de Mantenimiento.</li>
+                <li>Versatilidad en aplicaciones.</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <img src="../IMG/IMG/energiaEolica.png" alt="Energía Eólica" class="img-fluid mb-3">
+            <h3>Energía Eólica</h3>
+            <p><strong>Descripción:</strong> La energía eólica se genera a partir del viento mediante aerogeneradores que convierten la energía cinética en electricidad.</p>
+            <p><strong>Ventajas:</strong></p>
+            <ul>
+                <li>Sostenible y limpia.</li>
+                <li>Bajo Costo de Operación.</li>
+                <li>Generación Local.</li>
+                <li>Crea Empleos en la industria.</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <img src="../IMG/IMG/energiaHidroelectrica.png" alt="Energía Hidroeléctrica" class="img-fluid mb-3">
+            <h3>Energía Hidroeléctrica</h3>
+            <p><strong>Descripción:</strong> La energía hidroeléctrica se produce aprovechando la energía del agua en movimiento, generalmente a través de represas.</p>
+            <p><strong>Ventajas:</strong></p>
+            <ul>
+                <li>Eficiencia Alta en conversión.</li>
+                <li>Almacenamiento de Energía.</li>
+                <li>Beneficios Adicionales como control de inundaciones.</li>
+                <li>Bajas Emisiones de gases de efecto invernadero.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="../IMG/IMG/energiaGeotermica.png" alt="Energía Geotérmica" class="img-fluid mb-3">
+            <h3>Energía Geotérmica</h3>
+            <p><strong>Descripción:</strong> La energía geotérmica se obtiene del calor interno de la Tierra, utilizado para calefacción o generación de electricidad.</p>
+            <p><strong>Ventajas:</strong></p>
+            <ul>
+                <li>Sostenible y Confiable.</li>
+                <li>Bajas Emisiones de Carbono.</li>
+                <li>Uso Directo para calefacción.</li>
+                <li>Menor Huella Espacial.</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <img src="../IMG/IMG/biocombustibles.png" alt="Biocombustibles" class="img-fluid mb-3">
+            <h3>Biocombustibles</h3>
+            <p><strong>Descripción:</strong> Los biocombustibles se producen a partir de materia orgánica, como residuos agrícolas y aceites vegetales.</p>
+            <p><strong>Ventajas:</strong></p>
+            <ul>
+                <li>Reducen Dependencia de Combustibles Fósiles.</li>
+                <li>Ciclo de Carbono Neutral.</li>
+                <li>Promueven la Agricultura Sostenible.</li>
+                <li>Flexibilidad de Uso en infraestructura existente.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2024 Transición Energética Justa. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Para gráficos -->
+    <script src="script.js"></script> <!-- Archivo JavaScript personalizado -->
+    <script src="./JAVA SCRIPT/Calculadora.js"></script>
+    <script src="./JAVA SCRIPT/Visualizacion.js"></script>
+</body>
+</html>

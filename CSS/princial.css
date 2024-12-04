@@ -1,0 +1,353 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-image: url('../IMG/IMG/principal.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f8fb;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.table-wrapper {
+    background-color: rgba(255, 255, 255, 0.8); /* Añade un fondo blanco semitransparente */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado alrededor de la tabla */
+}
+
+
+h1, h2, h3 {
+    font-family: 'Times New Roman', Times, serif; /* Cambiado a Times New Roman */
+    color: #2c3e50;
+    text-align: center;
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateY(-30px); /* Coloca el título fuera de la pantalla hacia arriba */
+    display: inline-block;
+    animation: caer 2s ease-out forwards, aparecer 2s steps(15) forwards; /* Efecto de caída y aparición letra por letra */
+
+}
+
+@keyframes caer {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px); /* Comienza fuera de la vista */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Finaliza en su lugar original */
+    }
+}
+
+@keyframes aparecer {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes caer {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px); /* Comienza fuera de la pantalla hacia arriba */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Finaliza en su posición original */
+    }
+}
+/* Estilo para la imagen del CAPTCHA */
+.captcha-image {
+    width: 80px; /* Ancho fijo */
+    height: 80px; /* Altura fija */
+    margin: 10px auto; /* Centrar la imagen */
+    display: block; /* Asegura el centrado */
+    border: 2px solid #ccc; /* Borde ligero */
+    border-radius: 8px; /* Bordes redondeados */
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centramos la sección en pantallas grandes */
+    padding: 20px;
+    background: linear-gradient(135deg, #65f6e5, #fda085); /* Cambio de color al pasar el cursor */
+    border: 5px solid transparent; /* Hacemos el borde transparente */
+    border-radius: 15px; /* Bordes redondeados */
+    background-clip: padding-box; /* Hace que el degradado no se aplique al borde */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor */
+}
+
+
+/* Encabezado */
+header {
+    background: linear-gradient(135deg, #3498db, #1abc9c);
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    padding: 30px 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+}
+
+/* Navegación */
+.navbar {
+    display: flex;
+    font-family: 'Times New Roman', Times, serif; 
+    justify-content: center; /* Centra los elementos de navegación horizontalmente */
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    background-color: #ffffff;
+    
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #3498db !important;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-right: auto; /* Coloca el nombre de la marca a la izquierda */
+}
+
+.nav-link {
+    color: #555 !important;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 15px;
+    padding: 10px 20px;
+    transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link:hover {
+    color: #1abc9c !important;
+    transform: scale(1.1); /* Hace que el enlace crezca ligeramente */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #1abc9c;
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0; /* Expande la línea de subrayado al pasar el cursor */
+}
+
+.nav-link:active {
+    background: rgba(52, 152, 219, 0.1); /* Color de fondo temporal al hacer clic */
+    border-radius: 5px;
+}
+
+/* Secciones */
+section {
+    padding: 50px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 90%; /* Aseguramos que no ocupe todo el ancho */
+    text-align: center; /* Centra el contenido */
+}
+
+/* Fuentes de Energía */
+#fuentes .col-md-4 {
+    background: linear-gradient(135deg, #65f6e5, #fda085); /* Fondo con degradado llamativo */
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    margin: 15px 0; /* Espacio entre tarjetas */
+}
+
+#fuentes .col-md-4:hover {
+    transform: scale(1.05) rotate(-2deg); /* Zoom con rotación suave */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(135deg, #65f6e5, #fda085); /* Cambio de color al pasar el cursor */
+}
+
+#fuentes h3 {
+    color: #ffffff; /* Texto blanco para resaltar sobre el fondo */
+    font-size: 1.5rem;
+    text-transform: uppercase; /* Estilo en mayúsculas para destacar */
+    transition: color 0.3s ease;
+}
+
+#fuentes .col-md-4:hover h3 {
+    color: #f6d365; /* Cambio de color del texto al interactuar */
+}
+
+
+/* Calculadora */
+#calculadora .btn {
+    background: #e67e22;
+    border: none;
+    transition: background 0.3s ease;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+
+#calculadora .btn:hover {
+    background: #d35400;
+    color: white;
+}
+
+#calculadora input {
+    text-align: center; /* Centrar el texto dentro del input */
+}
+
+/* Visualización */
+#visualizacion p {
+    font-style: italic;
+    text-align: center;
+}
+
+canvas {
+    display: block;
+    margin: 0 auto; /* Centrar el canvas */
+}
+
+/* Contacto */
+#contacto .form-control {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    text-align: center; /* Centrar texto dentro de los inputs */
+    transition: border-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+#contacto .form-control:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+#contacto .btn {
+    background: #2ecc71;
+    border: none;
+    transition: background 0.3s ease;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+
+#contacto .btn:hover {
+    background: #27ae60;
+    color: white;
+}
+
+/* Pie de página */
+footer {
+    background: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Transiciones */
+a {
+    transition: color 0.3s ease;
+}
+
+button, input, textarea {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    #fuentes .col-md-4 {
+        margin-bottom: 20px;
+    }
+}
+/* Ajuste de la tabla y las celdas */
+.table-wrapper {
+    overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+    margin: 20px 0; /* Añade margen para separar la tabla de otros elementos */
+}
+
+table {
+    width: 100%;
+    table-layout: fixed; /* Mejor control del ancho de las celdas */
+    border-collapse: collapse; /* Elimina el espacio entre celdas */
+}
+
+th, td {
+    text-align: center;
+    padding: 12px 15px; /* Aumenta el espaciado dentro de las celdas para mejorar la legibilidad */
+    border: 1px solid #ddd; /* Añade un borde sutil a las celdas */
+    white-space: normal; /* Permite que el texto se ajuste dentro de las celdas */
+    background-color: #f9f9f9; /* Color de fondo suave para las celdas */
+}
+
+/* Estilo de los encabezados */
+th {
+    background-color: #3498db; /* Color de fondo para los encabezados */
+    color: white; /* Color de texto blanco */
+    font-weight: bold; /* Negrita para los encabezados */
+}
+
+/* Estilo en las filas de la tabla */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Fondo alterno para filas pares */
+}
+
+/* Efecto al pasar el ratón sobre las filas */
+tr:hover {
+    background-color: #f1c40f; /* Resalta las filas al pasar el ratón */
+    cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
+}
+
+/* Estilo para el botón "Conocer Fuentes de Energía" */
+.btn-conocer {
+    background-color: #22fff4; /* Naranja vibrante */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 1.2rem; /* Tamaño del texto */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-conocer:hover {
+    background-color: #d36b4b; /* Naranja más oscuro en hover */
+    transform: scale(1.05); /* Ligero aumento de tamaño */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.btn-conocer:active {
+    background-color: #77f1f1; /* Naranja más oscuro al hacer clic */
+    transform: scale(0.95); /* Disminuye el tamaño ligeramente */
+}

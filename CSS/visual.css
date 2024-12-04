@@ -1,0 +1,254 @@
+/* Estilo global */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f8fb;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Estilo de contenedor de tabla */
+.table-wrapper {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado alrededor de la tabla */
+}
+
+/* Estilo para los encabezados */
+h1, h2, h3 {
+    font-family: 'Times New Roman', Times, serif; /* Cambiado a Times New Roman */
+    color: #2c3e50;
+    text-align: center;
+    opacity: 0; /* Inicialmente invisible */
+    transform: translateY(-30px); /* Coloca el título fuera de la pantalla hacia arriba */
+    display: inline-block;
+    animation: caer 2s ease-out forwards, aparecer 2s steps(15) forwards; /* Efecto de caída y aparición letra por letra */
+}
+
+@keyframes caer {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px); /* Comienza fuera de la vista */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Finaliza en su lugar original */
+    }
+}
+
+@keyframes aparecer {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+/* Estilo para la imagen del CAPTCHA */
+.captcha-image {
+    width: 80px; /* Ancho fijo */
+    height: 80px; /* Altura fija */
+    margin: 10px auto; /* Centrar la imagen */
+    display: block; /* Asegura el centrado */
+    border: 2px solid #ccc; /* Borde ligero */
+    border-radius: 8px; /* Bordes redondeados */
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto; /* Centramos la sección en pantallas grandes */
+    padding: 20px;
+    background: linear-gradient(135deg, #65f6e5, #fda085); /* Cambio de color al pasar el cursor */
+    border: 5px solid transparent; /* Hacemos el borde transparente */
+    border-radius: 15px; /* Bordes redondeados */
+    background-clip: padding-box; /* Hace que el degradado no se aplique al borde */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor */
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(135deg, #3498db, #1abc9c);
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    padding: 30px 0;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 10px 0 0;
+}
+
+/* Navegación */
+.navbar {
+    display: flex;
+    font-family: 'Times New Roman', Times, serif; 
+    justify-content: center; /* Centra los elementos de navegación horizontalmente */
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    background-color: #ffffff;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #3498db !important;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-right: auto; /* Coloca el nombre de la marca a la izquierda */
+}
+
+.nav-link {
+    color: #555 !important;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 15px;
+    padding: 10px 20px;
+    transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link:hover {
+    color: #1abc9c !important;
+    transform: scale(1.1); /* Hace que el enlace crezca ligeramente */
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #1abc9c;
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0; /* Expande la línea de subrayado al pasar el cursor */
+}
+
+.nav-link:active {
+    background: rgba(52, 152, 219, 0.1); /* Color de fondo temporal al hacer clic */
+    border-radius: 5px;
+}
+
+/* Contenedor de gráficos */
+.chart-container {
+    position: relative;
+    margin: 20px auto;
+    max-width: 90%;
+    height: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco con opacidad */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para el contenedor */
+.chart-container:hover {
+    transform: scale(1.02); /* Zoom ligero */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Sombra más fuerte */
+}
+
+/* Estilo de la gráfica */
+.chart {
+    width: 100%;
+    height: 400px; /* Altura por defecto */
+    display: block;
+}
+
+/* Encabezado del gráfico */
+.chart-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #007bff; /* Azul suave */
+}
+
+/* Ajustes responsivos para dispositivos pequeños */
+@media (max-width: 768px) {
+    .chart-container {
+        max-width: 100%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .chart {
+        height: 250px; /* Ajustar altura para pantallas pequeñas */
+    }
+
+    .chart-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Ajustes para gráficos oscuros */
+.chart-dark {
+    background-color: #333; /* Fondo oscuro */
+    color: #fff;
+    border: 1px solid #444; /* Borde sutil */
+}
+
+/* Estilo de tabla */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+}
+
+.thead-dark th {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1c40f; /* Color de fondo al pasar el ratón */
+    color: #fff; /* Color de texto al pasar el ratón */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.table-bordered td, .table-bordered th {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px; /* Espaciado interno */
+}
+
+.table td, .table th {
+    text-align: center;
+    vertical-align: middle; /* Centrado vertical */
+}
+
+/* Pie de página */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    color: #555;
+    font-size: 0.9rem;
+}
